@@ -8,7 +8,7 @@ services:
       - "8081:8081"
       - "8082:8082"
     volumes:
-      - /home/panda/Infrastructure/artifactory/:/artifactory_extra_conf/
+      - ./artifactory/:/artifactory_extra_conf/
     restart: always
     healthcheck:
         test: ["CMD", "curl", "-f", "http://localhost:8082/artifactory/api/system/ping"]
