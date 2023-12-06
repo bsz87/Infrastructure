@@ -27,6 +27,7 @@ services:
       - "8880:8080"
     volumes:
       - ./jenkins_controller2/jenkins.yaml:/usr/share/jenkins/ref/jenkins.yaml
+      - ./jenkins_controller2/jobs:/usr/share/jenkins/ref/jobs
     restart: always
   jenkins_agent:
     depends_on:
